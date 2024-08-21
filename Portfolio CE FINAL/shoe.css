@@ -1,0 +1,72 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color for contrast */
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.shoe {
+  display: grid;
+  grid-template-columns: repeat(40, 8px); /* Adjust columns as needed */
+  grid-template-rows: repeat(40, 8px); /* Adjust rows as needed */
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear, pixelate 10s infinite linear;
+  gap: 1px; /* Gap between pixels for better visibility */
+}
+
+.pixel {
+  width: 8px; /* Adjust size of each pixel */
+  height: 8px; /* Adjust size of each pixel */
+  background-color: #000000; /* Default color for all pixels */
+}
+
+/* Nike Swoosh */
+.swoosh {
+  background-color: #ffffff; /* White color for Nike Swoosh */
+}
+
+/* Body of the Shoe */
+.body {
+  background-color: #ffffff; /* White color for shoe body */
+  /* Add more detailed shading and pixel placements */
+}
+
+/* Sole of the Shoe */
+.sole {
+  background-color: #cccccc; /* Light gray color for shoe sole */
+  /* Add more detailed shading and pixel placements */
+}
+
+/* Laces of the Shoe */
+.laces {
+  background-color: #ffffff; /* White color for shoe laces */
+  /* Add more detailed shading and pixel placements */
+}
+
+/* Keyframes for animation */
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes pixelate {
+  0%,
+  100% {
+    filter: none;
+  }
+  50% {
+    filter: url("#pixelate");
+  }
+}

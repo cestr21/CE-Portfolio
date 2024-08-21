@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Font styles */
+@font-face {
+  font-family: "Main";
+  src: url("assets/fonts/home_video/HomeVideo.ttf") format("truetype"),
+    url("assets/fonts/home_video/HomeVideoBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RetroFont";
+  src: url("assets/fonts/matrix_sans/MatrixSans-fonts/fonts/ttf/MatrixSans-Regular.ttf")
+      format("truetype"),
+    url("assets/fonts/matrix_sans/MatrixSans-fonts/fonts/ttf/MatrixSans-Regular.ttf")
+      format("truetype");
+}
+
+/* Global styles */
+body {
+  font-family: "Main";
+  background-color: #a3a2a3;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.outer-container {
+  background-color: #a3a2a3;
+  border: 3px solid #333;
+  padding: 15px;
+}
+
+.container {
+  max-width: 100%;
+  padding: 5px;
+  background-color: #d4d3d4;
+  border: 3px solid #333;
+  text-align: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4d3d4;
+  padding: 10px;
+  border: 3px solid #333;
+  margin-bottom: 10px;
+  box-shadow: inset 0px 0px 8px #333;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button {
+  border: 3px solid #333;
+  text-align: center;
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: #b5b4b5;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #333, 6px 6px 0px #e3e3e3, 8px 8px 0px #333; /* Enhanced 3D effect */
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 0px #333, 4px 4px 0px #e3e3e3, 6px 6px 0px #333;
+}
+
+.button img {
+  display: block;
+  width: 20px;
+  margin: 0 auto;
+}
+
+.address-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #333;
+  padding: 5px;
+  background-color: #e3e3e3;
+  margin-top: 20px;
+  box-shadow: inset 0px 0px 8px #333;
+}
+
+.address-bar {
+  font-family: "RetroFont";
+  font-size: 14px;
+  color: #000;
+  background-color: #ffffff;
+  padding: 2px 10px;
+  border: 2px solid #333;
+  text-align: left;
+}
+
+.main-content {
+  font-family: "Main";
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 3px solid #333;
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  font-family: "RetroFont";
+  margin: 0 0 1.5em;
+  font-weight: bold;
+}
+
+.main-content p {
+  font-family: "RetroFont";
+  margin-bottom: 1em;
+}
+
+.main-content ul {
+  font-family: "RetroFont";
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.main-content li {
+  font-family: "Main";
+  margin-bottom: 1em;
+}
+
+.retro-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 3px solid #333;
+  background-color: #d4d3d4;
+  box-shadow: inset 0px 0px 8px #333;
+}
+
+.retro-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article {
+  padding: 10px;
+  border: 2px solid #333;
+  box-shadow: inset 0px 0px 8px #333, 4px 4px 10px #333;
+  background-color: #d1d1d1; /* Slightly darker gray for a retro feel */
+  margin: 20px;
+}
+
+.article h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #e3e3e3;
+  padding: 5px;
+  border: 2px solid #333;
+  box-shadow: inset 0px 0px 8px #333;
+}
+
+.article p {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Mobile Styles for screens 768px and below */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0px 0px 8px #333;
+    background-color: #b5b4b5;
+  }
+
+  .button {
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+    box-shadow: 3px 3px 0px #333, 5px 5px 0px #e3e3e3, 7px 7px 0px #333; /* Retaining the 3D effect */
+    text-align: center;
+  }
+
+  .button img {
+    width: 30px;
+    margin-bottom: 5px;
+  }
+
+  .address-bar-container {
+    padding: 8px;
+    font-size: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+
+  .address-bar {
+    padding: 4px 6px;
+    font-size: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    word-break: break-all;
+  }
+
+  /* Content adjustments */
+  .main-content {
+    padding: 15px;
+    background-color: #d4d3d4;
+    box-shadow: none; /* Simplified shadow for mobile */
+  }
+
+  /* Retro image adjustments */
+  .retro-image {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #a3a2a3;
+  }
+
+  .retro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  /* Article adjustments */
+  .article {
+    margin-bottom: 25px;
+  }
+
+  .article h2 {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .article p {
+    font-size: 14px;
+    text-align: left;
+  }
+}
